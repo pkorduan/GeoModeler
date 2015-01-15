@@ -1,0 +1,41 @@
+<h1>DiagramElement</h1>
+<% model_element = ModelElement.find_by_xmi_id(@diagram_element.subject) %>
+<% if model_element %>
+<p>
+  <b>Name:</b>
+  <%= model_element.name %>
+</p>
+<% end %>
+<p>
+  <b>Geometry:</b>
+  <%=h @diagram_element.geometry %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @diagram_element.subject %>
+  (<%= link_to_function "show in tree", "openAncestors($('#{@diagram_element.subject}')); focusElement($('#{@diagram_element.subject}'));" %>)
+</p>
+
+<p>
+  <b>Seqno:</b>
+  <%=h @diagram_element.seqno %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%=h @diagram_element.style %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @diagram_element.model_id %>
+</p>
+
+<p>
+  <b>Diagram:</b>
+  <%=h @diagram_element.diagram.name %> (<%=h @diagram_element.diagram_id %>)
+</p>
+
+<%= link_to 'Edit', edit_diagram_element_path(@diagram_element) %> |
+<%= link_to 'Back', diagram_elements_path %>

@@ -1,0 +1,38 @@
+<h1>Listing association_classes</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Isroot</th>
+    <th>Isleaf</th>
+    <th>Isabstract</th>
+    <th>Isactive</th>
+    <th>Package</th>
+  </tr>
+
+<% @association_classes.each do |association_class| %>
+  <tr>
+    <td><%=h association_class.xmi_id %></td>
+    <td><%=h association_class.name %></td>
+    <td><%=h association_class.model_id %></td>
+    <td><%=h association_class.visibility %></td>
+    <td><%=h association_class.isSpecification %></td>
+    <td><%=h association_class.isRoot %></td>
+    <td><%=h association_class.isLeaf %></td>
+    <td><%=h association_class.isAbstract %></td>
+    <td><%=h association_class.isActive %></td>
+    <td><%=h association_class.package_id %></td>
+    <td><%= link_to 'Show', association_class %></td>
+    <td><%= link_to 'Edit', edit_association_class_path(association_class) %></td>
+    <td><%= link_to 'Destroy', association_class, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New association_class', new_association_class_path %>

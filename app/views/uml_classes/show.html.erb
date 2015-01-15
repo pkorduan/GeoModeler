@@ -1,0 +1,50 @@
+<h1>Class</h1>
+(id:<%=h @uml_class.id %>)
+<p>
+  <b>Xmi:</b>
+    <%=h @uml_class.xmi_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= link_to_function @uml_class.name, "openAncestors($('#{@uml_class.xmi_id}')); focusElement($('#{@uml_class.xmi_id}'));" %>	
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @uml_class.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @uml_class.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @uml_class.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @uml_class.isLeaf %>
+</p>
+
+<p>
+  <b>Isactive:</b>
+  <%=h @uml_class.isActive %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @uml_class.package_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @uml_class.model_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_uml_class_path(@uml_class) %> |
+<%= link_to 'Back', uml_classes_path %>

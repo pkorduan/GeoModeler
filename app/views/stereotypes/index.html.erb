@@ -1,0 +1,36 @@
+<h1>Listing stereotypes</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Isspecification</th>
+    <th>Isroot</th>
+    <th>Isleaf</th>
+    <th>Isabstract</th>
+    <th>Baseclass</th>
+    <th>Stereotype</th>
+  </tr>
+
+<% @stereotypes.each do |stereotype| %>
+  <tr>
+    <td><%=h stereotype.xmi_id %></td>
+    <td><%=h stereotype.name %></td>
+    <td><%=h stereotype.model_id %></td>
+    <td><%=h stereotype.isSpecification %></td>
+    <td><%=h stereotype.isRoot %></td>
+    <td><%=h stereotype.isLeaf %></td>
+    <td><%=h stereotype.isAbstract %></td>
+    <td><%=h stereotype.baseClass %></td>
+    <td><%=h stereotype.stereotype_id %></td>
+    <td><%= link_to 'Show', stereotype %></td>
+    <td><%= link_to 'Edit', edit_stereotype_path(stereotype) %></td>
+    <td><%= link_to 'Destroy', stereotype, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New stereotype', new_stereotype_path %>

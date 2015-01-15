@@ -1,0 +1,18 @@
+<h1>Model Reloaded</h1>
+
+<b>Stereotypes: </b><%= @num_stereotypes %><br>
+<b>Packages: </b><%= @num_packages %><br>
+<b>Classes: </b><%= @num_uml_classes %><br>
+<b>AssociationClasses: </b><%= @num_association_classes %><br>
+<b>Attributes: </b><%= @num_uml_attributes %><br>
+<b>Interfaces: </b><%= @num_interfaces %><br>
+<b>Actors: </b><%= @num_actors %><br>
+<b>UseCases: </b><%= @num_use_cases %><br>
+<b>ClassGeneralizations: </b><%= @num_class_generalizations %><br>
+<b>Associations: </b><%= @num_associations %><br>
+<b>AssociationEnds: </b><%= @num_association_ends %><br>
+<b>Diagrams: </b><%= @num_diagrams %>, with <%= @num_diagram_elements %> DiagramElements<br>
+<b>Model elements total: </b><%= @model.model_elements.count %>
+<br>
+<br>
+<%= link_to 'List Models', models_path %> | <%= link_to "Show in tree view", :controller => "model", :action => "tree", :id => @model.id %>

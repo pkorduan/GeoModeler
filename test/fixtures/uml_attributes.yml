@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  uml_class_id: 1
+  visibility: MyString
+  isSpecification: false
+  ownerSpace: MyString
+  changeability: MyString
+  targetScope: MyString
+  ordering: MyString
+
+two:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  uml_class_id: 1
+  visibility: MyString
+  isSpecification: false
+  ownerSpace: MyString
+  changeability: MyString
+  targetScope: MyString
+  ordering: MyString

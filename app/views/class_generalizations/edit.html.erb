@@ -1,0 +1,40 @@
+<h1>Editing class_generalization</h1>
+
+<% form_for(@class_generalization) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :isSpecification %><br />
+    <%= f.check_box :isSpecification %>
+  </p>
+  <p>
+    <%= f.label :package_id %><br />
+    <%= f.text_field :package_id %>
+  </p>
+  <p>
+    <%= f.label :parent_id %><br />
+    <%= f.text_field :parent_id %>
+  </p>
+  <p>
+    <%= f.label :child_id %><br />
+    <%= f.text_field :child_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @class_generalization %> |
+<%= link_to 'Back', class_generalizations_path %>

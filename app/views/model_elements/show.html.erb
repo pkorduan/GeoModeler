@@ -1,0 +1,23 @@
+<p>
+  <b>Xmi:</b>
+  <%=h @model_element.xmi_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @model_element.type %>
+</p>
+
+<p>
+  <b>Element:</b>
+  <%=h @model_element.element_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @model_element.model_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_model_element_path(@model_element) %> |
+<%= link_to 'Back', model_elements_path %>

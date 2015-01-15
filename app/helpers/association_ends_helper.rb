@@ -1,0 +1,2 @@
+module AssociationEndsHelper
+end

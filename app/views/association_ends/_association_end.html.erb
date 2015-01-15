@@ -1,0 +1,13 @@
+<div id="<%= association_end.xmi_id %>" alt="AssociationEnd" class="content" name="<%= association_end.name %>" style="margin-left:30px;display:none;">
+	<%= image_tag("icons/empty_icon.png", :size => "11x11", :onclick => "toggleSelected($('#{association_end.xmi_id}'))") %>
+	<%= association_end.name %>
+	<% participant = ModelElement.find_by_xmi_id(association_end.participant_xmi_id) %>
+	<% if participant.nil? %>
+	  ...<%= association_end.xmi_id[-40..-1] %>
+	<% else %>
+	  <%= ModelElement.find_by_xmi_id(association_end.participant_xmi_id).class_name %>:
+	  <%= ModelElement.find_by_xmi_id(association_end.participant_xmi_id).name %>
+  <% end %>
+  <%= link_to_remote image_tag("icons/table.png"), :update => "#{association_end.xmi_id}_data", :url => association_end_url(:id => association_end.id), :method => :get, :complete => "$('#{association_end.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= association_end.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

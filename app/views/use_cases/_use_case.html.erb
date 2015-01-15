@@ -1,0 +1,5 @@
+<div id="<%= use_case.xmi_id %>" alt="UseCase" class="content" name="<%= use_case.name %>" style="margin-left:30px;display:none;">
+	<%= image_tag("icons/UseCase.png", :onclick => "toggleSelected($('#{use_case.xmi_id}'))") %> <%= use_case.name %>
+  <%= link_to_remote image_tag("icons/table.png"), :update => "#{use_case.xmi_id}_data", :url => use_case_url(:id => use_case.id), :method => :get, :complete => "$('#{use_case.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= use_case.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

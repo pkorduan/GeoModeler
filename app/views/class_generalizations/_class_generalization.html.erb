@@ -1,0 +1,11 @@
+<div id="<%= class_generalization.xmi_id %>" alt="Generalization" class="content" style="margin-left:30px;display:none;">
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<%= image_tag("icons/#{class_generalization.class.name}.png", :onclick => "toggleSelected($('#{class_generalization.xmi_id}'))") %>
+  <% if !class_generalization.name.nil? %>
+		name: <%= class_generalization.name %>
+	<% end %>
+    <%= class_generalization.parent.nil? ? "nil" : class_generalization.parent.name[0..10] %>... <%= class_generalization.child.nil? ? "nil" : class_generalization.child.name[0..10] %>...
+	  <%= link_to_remote image_tag("icons/table.png"), :update => "#{class_generalization.xmi_id}_data",
+    :url => class_generalization_url(:id => class_generalization.id), :method => :get, :complete => "$('#{class_generalization.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= class_generalization.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

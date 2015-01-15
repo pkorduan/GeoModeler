@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  xml_file_name: MyString
+  owner_name: MyString
+
+two:
+  name: MyString
+  xml_file_name: MyString
+  owner_name: MyString

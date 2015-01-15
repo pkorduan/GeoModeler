@@ -1,0 +1,30 @@
+<h1>Listing diagram_elements</h1>
+
+<table>
+  <tr>
+    <th>Geometry</th>
+    <th>Subject</th>
+    <th>Seqno</th>
+    <th>Style</th>
+    <th>Model</th>
+    <th>Diagram</th>
+  </tr>
+
+<% @diagram_elements.each do |diagram_element| %>
+  <tr>
+    <td><%=h diagram_element.geometry %></td>
+    <td><%=h diagram_element.subject %></td>
+    <td><%=h diagram_element.seqno %></td>
+    <td><%=h diagram_element.style %></td>
+    <td><%=h diagram_element.model_id %></td>
+    <td><%=h diagram_element.diagram_id %></td>
+    <td><%= link_to 'Show', diagram_element %></td>
+    <td><%= link_to 'Edit', edit_diagram_element_path(diagram_element) %></td>
+    <td><%= link_to 'Destroy', diagram_element, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New diagram_element', new_diagram_element_path %>

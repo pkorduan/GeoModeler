@@ -1,0 +1,2 @@
+module UmlAttributesHelper
+end

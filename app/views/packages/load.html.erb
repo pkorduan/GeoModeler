@@ -1,0 +1,15 @@
+<h1>Listing packages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @packages.each do |package| %>
+  <tr>
+    <td><%=h package %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

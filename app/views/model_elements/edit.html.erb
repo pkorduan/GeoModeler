@@ -1,0 +1,28 @@
+<h1>Editing model_element</h1>
+
+<% form_for(@model_element) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :element_id %><br />
+    <%= f.text_field :element_id %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @model_element %> |
+<%= link_to 'Back', model_elements_path %>

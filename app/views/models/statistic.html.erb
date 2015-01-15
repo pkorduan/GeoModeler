@@ -1,0 +1,16 @@
+<h1>Model Statistic</h1>
+<b>Name:</b> <%= @model.name %><br>
+<b>ID:</b> <%= @model.id %><br>
+<b>XMI.ID:</b> <%= @model.xmi_id %><br>
+<b>Stereotypes: </b><%= @model.stereotypes.count %><br>
+<b>Packages: </b><%= @model.packages.count %><br>
+<b>Classes: </b><%= @model.uml_classes.count %><br>
+<b>AssociationClasses: </b><%= @model.association_classes.count %><br>
+<b>Attributes: </b><%= @model.uml_attributes.count %><br>
+<b>Interfaces: </b><%= @model.interfaces.count %><br>
+<b>ClassGeneralizations: </b><%= @model.class_generalizations.count %><br>
+<b>Diagrams: </b><%= @model.diagrams.count %>, with <%= @model.diagram_elements.count %> DiagramElements<br>
+<b>Model elements total: </b><%= @model.model_elements.count %>
+<br>
+<br>
+<%= link_to 'List Models', models_path %> | <%= link_to "Show in tree view", :controller => "model", :action => "tree", :id => @model.id %>

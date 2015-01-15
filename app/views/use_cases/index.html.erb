@@ -1,0 +1,36 @@
+<h1>Listing use_cases</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Model</th>
+    <th>Name</th>
+    <th>Package</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Isroot</th>
+    <th>Isleaf</th>
+    <th>Isabstract</th>
+  </tr>
+
+<% @use_cases.each do |use_case| %>
+  <tr>
+    <td><%=h use_case.xmi_id %></td>
+    <td><%=h use_case.model_id %></td>
+    <td><%=h use_case.name %></td>
+    <td><%=h use_case.package_id %></td>
+    <td><%=h use_case.visibility %></td>
+    <td><%=h use_case.isSpecification %></td>
+    <td><%=h use_case.isRoot %></td>
+    <td><%=h use_case.isLeaf %></td>
+    <td><%=h use_case.isAbstract %></td>
+    <td><%= link_to 'Show', use_case %></td>
+    <td><%= link_to 'Edit', edit_use_case_path(use_case) %></td>
+    <td><%= link_to 'Destroy', use_case, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New use_case', new_use_case_path %>

@@ -1,0 +1,52 @@
+<h1>Editing association</h1>
+
+<% form_for(@association) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :package_id %><br />
+    <%= f.text_field :package_id %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :visibility %><br />
+    <%= f.check_box :visibility %>
+  </p>
+  <p>
+    <%= f.label :isSpecification %><br />
+    <%= f.check_box :isSpecification %>
+  </p>
+  <p>
+    <%= f.label :isRoot %><br />
+    <%= f.check_box :isRoot %>
+  </p>
+  <p>
+    <%= f.label :isLeaf %><br />
+    <%= f.check_box :isLeaf %>
+  </p>
+  <p>
+    <%= f.label :isAbstract %><br />
+    <%= f.check_box :isAbstract %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @association %> |
+<%= link_to 'Back', associations_path %>

@@ -1,0 +1,53 @@
+<h1>Interface</h1>
+<p>
+  (id:<%= @interface.id %>)
+</p>
+
+<p>
+  <b>Xmi:</b>
+  <%= @interface.xmi_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+	<%= link_to_function @interface.name, "openAncestors($('#{@interface.xmi_id}')); focusElement($('#{@interface.xmi_id}'));" %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @interface.model_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @interface.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @interface.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @interface.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @interface.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @interface.isAbstract %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @interface.package.name %> (id:<%=h @interface.package.id %>)
+</p>
+
+
+<%= link_to 'Edit', edit_interface_path(@interface) %> |
+<%= link_to 'Back', interfaces_path %>

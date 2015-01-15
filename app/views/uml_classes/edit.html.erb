@@ -1,0 +1,48 @@
+<h1>Editing uml_class</h1>
+
+<% form_for(@uml_class) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :visibility %><br />
+    <%= f.text_field :visibility %>
+  </p>
+  <p>
+    <%= f.label :isSpecification %><br />
+    <%= f.check_box :isSpecification %>
+  </p>
+  <p>
+    <%= f.label :isRoot %><br />
+    <%= f.check_box :isRoot %>
+  </p>
+  <p>
+    <%= f.label :isLeaf %><br />
+    <%= f.check_box :isLeaf %>
+  </p>
+  <p>
+    <%= f.label :isActive %><br />
+    <%= f.check_box :isActive %>
+  </p>
+  <p>
+    <%= f.label :package_id %><br />
+    <%= f.text_field :package_id %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @uml_class %> |
+<%= link_to 'Back', uml_classes_path %>

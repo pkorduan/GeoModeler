@@ -1,0 +1,40 @@
+<h1>Editing diagram</h1>
+
+<% form_for(@diagram) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :package_id %><br />
+    <%= f.text_field :package_id %>
+  </p>
+  <p>
+    <%= f.label :diagramType %><br />
+    <%= f.text_field :diagramType %>
+  </p>
+  <p>
+    <%= f.label :toolName %><br />
+    <%= f.text_field :toolName %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @diagram %> |
+<%= link_to 'Back', diagrams_path %>

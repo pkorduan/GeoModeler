@@ -1,0 +1,36 @@
+<h1>Listing uml_classes</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Isroot</th>
+    <th>Isleaf</th>
+    <th>Isactive</th>
+    <th>Package</th>
+    <th>Model</th>
+  </tr>
+
+<% @uml_classes.each do |uml_class| %>
+  <tr>
+    <td><%=h uml_class.xmi_id %></td>
+    <td><%=h uml_class.name %></td>
+    <td><%=h uml_class.visibility %></td>
+    <td><%=h uml_class.isSpecification %></td>
+    <td><%=h uml_class.isRoot %></td>
+    <td><%=h uml_class.isLeaf %></td>
+    <td><%=h uml_class.isActive %></td>
+    <td><%=h uml_class.package_id %></td>
+    <td><%=h uml_class.model_id %></td>
+    <td><%= link_to 'Show', uml_class %></td>
+    <td><%= link_to 'Edit', edit_uml_class_path(uml_class) %></td>
+    <td><%= link_to 'Destroy', uml_class, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New uml_class', new_uml_class_path %>

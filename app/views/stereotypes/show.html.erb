@@ -1,0 +1,49 @@
+<h1>Stereotype</h1>
+<p>
+  <b>Xmi:</b>
+  <%= link_to_function @stereotype.xmi_id, "openAncestors($('#{@stereotype.xmi_id}')); focusElement($('#{@stereotype.xmi_id}'));" %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @stereotype.name %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @stereotype.model_id %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @stereotype.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @stereotype.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @stereotype.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @stereotype.isAbstract %>
+</p>
+
+<p>
+  <b>Baseclass:</b>
+  <%=h @stereotype.baseClass %>
+</p>
+
+<p>
+  <b>Stereotype:</b>
+  <%=h @stereotype.stereotype_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_stereotype_path(@stereotype) %> |
+<%= link_to 'Back', stereotypes_path %>

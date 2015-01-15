@@ -1,0 +1,30 @@
+<h1>Model</h1>
+<p>
+  <b>ID:</b>
+  <%=h @model.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @model.name %>
+</p>
+
+<p>
+  <b>Xml file name:</b>
+  <%=h @model.xml_file_name %>
+</p>
+
+<p>
+  <b>Owner name:</b>
+  <%=h @model.owner_name %>
+</p>
+
+<p>
+  <b>XMI ID:</b>
+  <%=h @model.xmi_id %>
+</p>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to "Load from xmi file", :controller => "model", :action => "load", :id => @model.id %> |
+<%= link_to "Show in tree view", :controller => "model", :action => "tree", :id => @model.id %> |
+<%= link_to 'List Models', models_path %>

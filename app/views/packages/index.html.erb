@@ -1,0 +1,28 @@
+<h1>Listing packages</h1>
+
+Anzahl Pakete: <%= @packages.count %>
+<table border="1" cellspacing="0" cellpadding="2">
+  <tr>
+		<th>Model</th>
+    <th>Name</th>
+		<th>DB-ID</th>
+		<th>Parent</th>
+    <th>Funktionen</th>
+	</tr>
+
+<% @packages.each do |package| %>
+  <tr>
+    <td><%= link_to package.model.name, package.model %></td>
+		<td><%= link_to package.name, package %></td>
+		<td><%=h package.id %></td>		
+		<td><%=h package.parent_package_id %></td>
+    <td><%= link_to 'Diagrams', "/packages/#{package.id}/diagrams" %> |
+		    <%= link_to 'Generalization', "/packages/#{package.id}/class_generalizations" %> |
+				<%= link_to 'Edit', edit_package_path(package) %> | <%= link_to 'Destroy', package, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New package', new_package_path %>

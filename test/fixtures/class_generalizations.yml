@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  isSpecification: false
+  package_id: 1
+  parent_id: 1
+  child_id: 1
+
+two:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  isSpecification: false
+  package_id: 1
+  parent_id: 1
+  child_id: 1

@@ -1,0 +1,17 @@
+<div id="search">
+  <%= render :partial => "models/search_form" %>
+</div>
+<div id="searchResultBox" class="searchResultBox" style="display:none;">
+	<div class="close"><%= link_to_function(image_tag("icons/cross.png", :width => "12"), nil, :id => "close_search_results") do |page|
+		page.visual_effect(:blind_up, "searchResultBox", :duration => "0.5")
+  end %></div>
+	<div id="searchResults" class="searchResults"></div>
+</div>
+<h1>Model Tree View</h1>
+<div id="<%= @model.xmi_id %>">
+  <%= image_tag("icons/plus_icon.png", :id => "#{@model.xmi_id}_img", :size => "11x11", :onclick => "toggleChildElements(this);", :alt => "show") %> <%= @model.name %><br>
+  <%= render :partial => "packages/package", :collection => @packages %>
+  <%= render :partial => "stereotypes/stereotype", :collection => @model.stereotypes %>
+</div>
+<br>
+<%= link_to 'List Models', models_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  xmi_id: MyString
+  name: MyString
+  visibility: MyString
+  isSpecification: false
+  isRoot: false
+  isLeaf: false
+  isActive: false
+  package_id: 1
+  model_id: 1
+
+two:
+  xmi_id: MyString
+  name: MyString
+  visibility: MyString
+  isSpecification: false
+  isRoot: false
+  isLeaf: false
+  isActive: false
+  package_id: 1
+  model_id: 1

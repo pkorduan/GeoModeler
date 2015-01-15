@@ -1,0 +1,32 @@
+<h1>Listing class_generalizations</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Isspecification</th>
+    <th>Package</th>
+    <th>Parent</th>
+    <th>Child</th>
+  </tr>
+
+<% @class_generalizations.each do |class_generalization| %>
+  <tr>
+    <td><%=h class_generalization.xmi_id %></td>
+    <td><%=h class_generalization.name %></td>
+    <td><%= link_to class_generalization.model_id, class_generalization.model %></td>
+    <td><%=h class_generalization.isSpecification %></td>
+    <td><%=h class_generalization.package_id %></td>
+    <td><%=h class_generalization.parent.xmi_id %> (<%=h class_generalization.parent_id %>)</td>
+    <td><%=h class_generalization.child.xmi_id %> (<%=h class_generalization.child_id %>)</td>
+    <td><%= link_to 'Show', class_generalization %></td>
+    <td><%= link_to 'Edit', edit_class_generalization_path(class_generalization) %></td>
+    <td><%= link_to 'Destroy', class_generalization, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New class_generalization', new_class_generalization_path %>

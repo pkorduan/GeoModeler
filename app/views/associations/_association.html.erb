@@ -1,0 +1,11 @@
+<div id="<%= association.xmi_id %>" alt="Association" class="content" name="<%= association.name %>" style="margin-left:30px;display:none;">
+  <% if (association.association_ends.count > 0) %>
+	  <%= image_tag("icons/plus_icon.png", :id => "#{association.xmi_id}_img", :size => "11x11", :onclick => "toggleChildElements(this);", :alt => "show") %>
+  <% else %>
+	  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<% end %>
+	<%= image_tag("icons/Association.png", :onclick => "toggleSelected($('#{association.xmi_id}'))") %> <%= association.name %>
+  <%= link_to_remote image_tag("icons/table.png"), :update => "#{association.xmi_id}_data", :url => association_url(:id => association.id), :method => :get, :complete => "$('#{association.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= association.xmi_id %>_data" class="data" style="display:none;"></div>
+	<%= render :partial => "association_ends/association_end", :collection => association.association_ends %>
+</div>

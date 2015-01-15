@@ -1,0 +1,52 @@
+<h1>Association</h1>
+<p>
+  <b>Xmi:</b>
+  <%=h @association.xmi_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @association.model_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @association.name %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @association.package_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @association.model_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @association.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @association.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @association.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @association.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @association.isAbstract %>
+</p>
+<%= link_to 'Edit', edit_association_path(@association) %> |
+<%= link_to 'Back', associations_path %>

@@ -1,0 +1,54 @@
+<h1>AssociationClass</h1>
+<p>
+  <b>Xmi:</b>
+  <%=h @association_class.xmi_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= link_to_function @association_class.name, "openAncestors($('#{@association_class.xmi_id}')); focusElement($('#{@association_class.xmi_id}'));" %>	
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @association_class.model_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @association_class.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @association_class.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @association_class.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @association_class.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @association_class.isAbstract %>
+</p>
+
+<p>
+  <b>Isactive:</b>
+  <%=h @association_class.isActive %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @association_class.package.name %> (<%=h @association_class.package_id %>)
+</p>
+
+
+<%= link_to 'Edit', edit_association_class_path(@association_class) %> |
+<%= link_to 'Back', association_classes_path %>

@@ -1,0 +1,55 @@
+<h1>Attribute</h1>
+(id:<%=h @uml_attribute.id %>)
+<p>
+  <b>Xmi:</b>
+  <%= link_to_function @uml_attribute.xmi_id, "openAncestors($('#{@uml_attribute.xmi_id}')); focusElement($('#{@uml_attribute.xmi_id}'));" %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @uml_attribute.name %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @uml_attribute.model_id %>
+</p>
+
+<p>
+  <b>Uml class:</b>
+  <%=h @uml_attribute.uml_class_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @uml_attribute.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @uml_attribute.isSpecification %>
+</p>
+
+<p>
+  <b>Ownerspace:</b>
+  <%=h @uml_attribute.ownerSpace %>
+</p>
+
+<p>
+  <b>Changeability:</b>
+  <%=h @uml_attribute.changeability %>
+</p>
+
+<p>
+  <b>Targetscope:</b>
+  <%=h @uml_attribute.targetScope %>
+</p>
+
+<p>
+  <b>Ordering:</b>
+  <%=h @uml_attribute.ordering %>
+</p>
+
+
+<%= link_to 'Edit', edit_uml_attribute_path(@uml_attribute) %> |
+<%= link_to 'Back', uml_attributes_path %>

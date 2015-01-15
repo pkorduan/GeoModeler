@@ -1,0 +1,21 @@
+<a name="<%= package.xmi_id %>"></a>
+<div id="<%= package.xmi_id %>" name="<%= package.name %>" alt="Package" class="content" style="display:none;">
+  <% if (!package.packages.empty? or !package.uml_classes.empty? or !package.diagrams.empty? or !package.associations.empty? or !package.actors.empty? or !package.use_cases.empty?) %>
+	  <%= image_tag("icons/plus_icon.png", :id => "#{package.xmi_id}_img", :size => "11x11", :onclick => "toggleChildElements(this);", :alt => "show") %>
+	<% else %>
+	  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<% end %>
+	<%= image_tag("icons/#{package.class.name}.png", :onclick => "toggleSelected($('#{package.xmi_id}'))") %>
+	<%= package.name %>
+	<%= link_to_remote image_tag("icons/table.png"), :update => "#{package.xmi_id}_data", :url => package_url(:id => package.id), :method => :get, :complete => "$('#{package.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= package.xmi_id %>_data" class="data" style="display:none;"></div>
+	<%= render :partial => "diagrams/diagram", :collection => package.diagrams %>
+	<%= render :partial => "packages/package", :collection => package.packages %>
+	<%= render :partial => "interfaces/interface", :collection => package.interfaces %>
+  <%= render :partial => "uml_classes/uml_class", :collection => package.uml_classes %>
+  <%= render :partial => "association_classes/association_class", :collection => package.association_classes %>
+	<%= render :partial => "actors/actor", :collection => package.actors %>
+	<%= render :partial => "use_cases/use_case", :collection => package.use_cases %>
+  <%= render :partial => "class_generalizations/class_generalization", :collection => package.class_generalizations %>
+	<%= render :partial => "associations/association", :collection => package.associations %>
+</div>

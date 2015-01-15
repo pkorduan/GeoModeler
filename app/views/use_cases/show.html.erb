@@ -1,0 +1,49 @@
+<h1>Use Case</h1>
+<p>
+  <b>Xmi:</b>
+  <%=h @use_case.xmi_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @use_case.model_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @use_case.name %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @use_case.package_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @use_case.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @use_case.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @use_case.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @use_case.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @use_case.isAbstract %>
+</p>
+
+
+<%= link_to 'Edit', edit_use_case_path(@use_case) %> |
+<%= link_to 'Back', use_cases_path %>

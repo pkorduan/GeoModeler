@@ -1,0 +1,7 @@
+<div id="<%= interface.xmi_id %>" alt="Interface" class="content" name="<%= interface.name %>" style="margin-left:30px;display:none;">
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<%= image_tag("icons/#{interface.class.name}.png", :onclick => "toggleSelected($('#{interface.xmi_id}'))") %> <%= interface.name %>
+	  <%= link_to_remote image_tag("icons/table.png"), :update => "#{interface.xmi_id}_data",
+    :url => interface_url(:id => interface.id), :method => :get, :complete => "$('#{interface.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= interface.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

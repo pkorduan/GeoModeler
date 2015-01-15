@@ -1,0 +1,13 @@
+<div id="<%= association_class.xmi_id %>" alt="AssociationClass" class="content" name="<%= association_class.name %>" style="margin-left:30px;display:none;">
+  <% if (association_class.uml_attributes.count > 0) %>
+	  <%= image_tag("icons/plus_icon.png", :id => "#{association_class.xmi_id}_img", :size => "11x11", :onclick => "toggleChildElements(this);", :alt => "show") %>
+  <% else %>
+	  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<% end %>
+	<%= image_tag("icons/#{association_class.class.name}.png", :onclick => "toggleSelected($('#{association_class.xmi_id}'))") %>
+	<%= association_class.name %>
+	<%= link_to_remote image_tag("icons/table.png"), :update => "#{association_class.xmi_id}_data",
+    :url => association_class_url(:id => association_class.id), :method => :get, :complete => "$('#{association_class.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= association_class.xmi_id %>_data" class="data" style="display:none;"></div>
+	 <%= render :partial => "uml_attributes/uml_attribute", :collection => association_class.uml_attributes %>
+</div>

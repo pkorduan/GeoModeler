@@ -1,0 +1,49 @@
+<h1>Actor</h1>
+<p>
+  <b>Xmi:</b>
+  <%=h @actor.xmi_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @actor.model_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @actor.name %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @actor.package_id %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @actor.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @actor.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @actor.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @actor.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @actor.isAbstract %>
+</p>
+
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

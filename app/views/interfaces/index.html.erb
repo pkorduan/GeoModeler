@@ -1,0 +1,36 @@
+<h1>Listing interfaces</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Isroot</th>
+    <th>Isleaf</th>
+    <th>Isabstract</th>
+    <th>Package</th>
+  </tr>
+
+<% @interfaces.each do |interface| %>
+  <tr>
+    <td><%=h interface.xmi_id %></td>
+    <td><%=h interface.name %></td>
+    <td><%=h interface.model_id %></td>
+    <td><%=h interface.visibility %></td>
+    <td><%=h interface.isSpecification %></td>
+    <td><%=h interface.isRoot %></td>
+    <td><%=h interface.isLeaf %></td>
+    <td><%=h interface.isAbstract %></td>
+    <td><%=h interface.package %></td>
+    <td><%= link_to 'Show', interface %></td>
+    <td><%= link_to 'Edit', edit_interface_path(interface) %></td>
+    <td><%= link_to 'Destroy', interface, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New interface', new_interface_path %>

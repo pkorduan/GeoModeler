@@ -1,0 +1,48 @@
+<h1>Listing association_ends</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Model</th>
+    <th>Name</th>
+    <th>Association</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Isnavigable</th>
+    <th>Aggregation</th>
+    <th>Targetscope</th>
+    <th>Multiplicity xmi</th>
+    <th>Multiplicity range xmi</th>
+    <th>Multiplicity range lower</th>
+    <th>Multiplicity range upper</th>
+    <th>Participant type</th>
+    <th>Participant xmi</th>
+  </tr>
+
+<% @association_ends.each do |association_end| %>
+  <tr>
+    <td><%=h association_end.xmi_id %></td>
+    <td><%=h association_end.model_id %></td>
+    <td><%=h association_end.name %></td>
+    <td><%=h association_end.association_id %></td>
+    <td><%=h association_end.visibility %></td>
+    <td><%=h association_end.isSpecification %></td>
+    <td><%=h association_end.isNavigable %></td>
+    <td><%=h association_end.aggregation %></td>
+    <td><%=h association_end.targetScope %></td>
+    <td><%=h association_end.multiplicity_xmi_id %></td>
+    <td><%=h association_end.multiplicity_range_xmi_id %></td>
+    <td><%=h association_end.multiplicity_range_lower %></td>
+    <td><%=h association_end.multiplicity_range_upper %></td>
+    <td><%=h association_end.participant_type %></td>
+    <td><%=h association_end.participant_xmi_id %></td>
+    <td><%= link_to 'Show', association_end %></td>
+    <td><%= link_to 'Edit', edit_association_end_path(association_end) %></td>
+    <td><%= link_to 'Destroy', association_end, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New association_end', new_association_end_path %>

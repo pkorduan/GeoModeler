@@ -1,0 +1,34 @@
+<h1>Listing diagrams</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Package</th>
+    <th>Diagramtype</th>
+    <th>Toolname</th>
+    <th>Image</th>
+  </tr>
+
+<% @diagrams.each do |diagram| %>
+  <tr>
+    <td><%=h diagram.xmi_id %></td>
+    <td><%=h diagram.name %></td>
+    <td><%=h diagram.model_id %></td>
+    <td><%=h diagram.package_id %></td>
+    <td><%=h diagram.diagramType %></td>
+    <td><%=h diagram.toolName %></td>
+    <td><%=h diagram.image %></td>
+    <td><%= link_to 'Show', diagram %></td>
+    <td><%= link_to 'Edit', edit_diagram_path(diagram) %></td>
+    <td><%= link_to 'Destroy', diagram, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New diagram', new_diagram_path %> |
+<%= link_to 'List Models', models_path %> |
+<%= link_to "Show in tree view", :controller => "model", :action => "tree", :id => @diagrams[0].model.id %>

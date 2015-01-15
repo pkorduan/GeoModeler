@@ -1,0 +1,12 @@
+<div id="<%= diagram_element.div_id %>" alt="DiagramElement" class="content" style="margin-left:30px;display:none;">
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<% model_element = ModelElement.find_by_xmi_id(diagram_element.subject) %>
+	<% if model_element %>
+	  <%= image_tag("icons/#{model_element.class_name}.png", :onclick => "toggleSelected($('#{diagram_element.div_id}'))") %>
+	  <%= link_to_function model_element.name, "openAncestors($('#{diagram_element.subject}')); focusElement($('#{diagram_element.subject}'));" %>
+	<% else %>	
+	  <%= image_tag("icons/DiagramElement.png") %> <%= "#{diagram_element.subject}" %>
+  <% end %>
+    <%= link_to_remote image_tag("icons/table.png"), :update => "#{diagram_element.div_id}_data", :url => diagram_element_url(:id => diagram_element.id), :method => :get, :complete => "$('#{diagram_element.div_id}_data').toggle();"; %><br>
+	<div id="<%= diagram_element.div_id %>_data" class="data" style="display:none;"></div>
+</div>

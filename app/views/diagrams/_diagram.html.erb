@@ -1,0 +1,6 @@
+<div id="<%= diagram.xmi_id %>" alt="Diagram" class="content" alt="Diagram" name="<%= diagram.name %>" style="margin-left:30px;display:none;">
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<%= image_tag("icons/Diagram.png", :onclick => "toggleSelected($('#{diagram.xmi_id}'))") %> <%= diagram.name %>
+  <%= link_to_remote image_tag("icons/table.png"), :update => "#{diagram.xmi_id}_data", :url => diagram_url(:id => diagram.id), :method => :get, :complete => "$('#{diagram.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= diagram.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

@@ -1,0 +1,48 @@
+<h1>Diagram</h1>
+<p>
+  (id:<%=h @diagram.id %>)
+</p>
+<p>
+  <b>Xmi:</b>
+  <%=h @diagram.xmi_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @diagram.name %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @diagram.model_id %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @diagram.package_id %>
+</p>
+
+<p>
+  <b>Diagramtype:</b>
+  <%=h @diagram.diagramType %>
+</p>
+
+<p>
+  <b>Toolname:</b>
+  <%=h @diagram.toolName %>
+</p>
+
+<p>
+  <b>Image:</b><br>
+  <%= link_to image_tag("diagrams/"+@diagram.xmi_id+".png", :width => "500px"), "/images/diagrams/"+@diagram.xmi_id+".png", { :target=> "_blank"} %>
+</p>
+<b>Diagram elements:</b>
+<% if (@diagram.diagram_elements.count > 0) %>
+  <%= image_tag("icons/plus_icon.png", :id => "#{@diagram.xmi_id}_img", :size => "11x11", :onclick => "toggleChildElements(this);", :alt => "show") %>
+<% else %>
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+<% end %>
+<%= render :partial => "diagram_elements/diagram_element", :collection => @diagram.diagram_elements %>	
+<br><br>
+<%= link_to 'Edit', edit_diagram_path(@diagram) %> |
+<%= link_to 'Back', diagrams_path %>

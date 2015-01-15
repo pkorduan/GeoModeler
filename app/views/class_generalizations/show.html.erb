@@ -1,0 +1,41 @@
+<h1>Generalization</h1>
+<p>
+  <b>Xmi:</b>
+	<%= link_to_function @class_generalization.xmi_id, "openAncestors($('#{@class_generalization.xmi_id}')); focusElement($('#{@class_generalization.xmi_id}'));" %>	
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @class_generalization.name %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @class_generalization.model.name %> (id:<%=h @class_generalization.model_id %>)
+	<%= link_to_remote "Show", :update => "data", :url => model_url(:id => @class_generalization.model_id), :method => :get %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @class_generalization.isSpecification %>
+</p>
+
+<p>
+  <b>Package:</b>
+  <%=h @class_generalization.package.name %> (id:<%=h @class_generalization.package_id %>)
+	<%= link_to_remote "Show", :update => "data", :url => package_url(:id => @class_generalization.package_id), :method => :get %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%=h @class_generalization.parent.name %> (id:<%=h @class_generalization.parent_id %>) <%= link_to_remote "Show", :update => "data", :url => uml_class_url(:id => @class_generalization.parent_id), :method => :get %>
+</p>
+
+<p>
+  <b>Child:</b>
+  <%=h @class_generalization.child.name %> (id:<%=h @class_generalization.child_id %>) <%= link_to_remote "Show", :update => "data", :url => uml_class_url(:id => @class_generalization.child_id), :method => :get %>
+</p>
+
+
+<%= link_to 'Edit', edit_class_generalization_path(@class_generalization) %> |
+<%= link_to 'Back', class_generalizations_path %>

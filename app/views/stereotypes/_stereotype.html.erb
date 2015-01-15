@@ -1,0 +1,8 @@
+<a name="<%= stereotype.xmi_id %>"></a>
+<div id="<%= stereotype.xmi_id %>" alt="Stereotype" class="content" name="<%= stereotype.name %>" style="margin-left:30px;display:none;">
+  <%= image_tag("icons/empty_icon.png", :size => "11x11") %>
+	<%= image_tag("icons/#{stereotype.class.name}.png", :onclick => "toggleSelected($('#{stereotype.xmi_id}'))") %> <%= stereotype.name %> 
+	  <%= link_to_remote image_tag("icons/table.png"), :update => "#{stereotype.xmi_id}_data",
+    :url => stereotype_url(:id => stereotype.id), :method => :get, :complete => "$('#{stereotype.xmi_id}_data').toggle();"; %><br>
+	<div id="<%= stereotype.xmi_id %>_data" class="data" style="display:none;"></div>
+</div>

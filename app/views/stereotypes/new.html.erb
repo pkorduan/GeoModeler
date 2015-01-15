@@ -1,0 +1,47 @@
+<h1>New stereotype</h1>
+
+<% form_for(@stereotype) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :isSpecification %><br />
+    <%= f.check_box :isSpecification %>
+  </p>
+  <p>
+    <%= f.label :isRoot %><br />
+    <%= f.check_box :isRoot %>
+  </p>
+  <p>
+    <%= f.label :isLeaf %><br />
+    <%= f.check_box :isLeaf %>
+  </p>
+  <p>
+    <%= f.label :isAbstract %><br />
+    <%= f.check_box :isAbstract %>
+  </p>
+  <p>
+    <%= f.label :baseClass %><br />
+    <%= f.text_field :baseClass %>
+  </p>
+  <p>
+    <%= f.label :stereotype_id %><br />
+    <%= f.text_field :stereotype_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', stereotypes_path %>

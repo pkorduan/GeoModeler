@@ -1,0 +1,48 @@
+<h1>Package</h1>
+(id:<%=h @package.id %>)
+<p>
+  <b>Xmi:</b>
+  <%= link_to_function @package.xmi_id, "openAncestors($('#{@package.xmi_id}')); focusElement($('#{@package.xmi_id}'));" %>
+</p>
+<p>
+  <b>Name:</b>
+  <%=h @package.name %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @package.visibility %>
+</p>
+
+<p>
+  <b>Isspecification:</b>
+  <%=h @package.isSpecification %>
+</p>
+
+<p>
+  <b>Isroot:</b>
+  <%=h @package.isRoot %>
+</p>
+
+<p>
+  <b>Isleaf:</b>
+  <%=h @package.isLeaf %>
+</p>
+
+<p>
+  <b>Isabstract:</b>
+  <%=h @package.isAbstract %>
+</p>
+
+<p>
+  <b>Model ID:</b>
+  <%=h @package.model_id %>
+</p>
+
+<p>
+  <b>Parent Package ID:</b>
+  <%=h @package.parent_package_id %>
+</p>
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>

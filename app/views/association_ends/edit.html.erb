@@ -1,0 +1,72 @@
+<h1>Editing association_end</h1>
+
+<% form_for(@association_end) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :xmi_id %><br />
+    <%= f.text_field :xmi_id %>
+  </p>
+  <p>
+    <%= f.label :model_id %><br />
+    <%= f.text_field :model_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :association_id %><br />
+    <%= f.text_field :association_id %>
+  </p>
+  <p>
+    <%= f.label :visibility %><br />
+    <%= f.check_box :visibility %>
+  </p>
+  <p>
+    <%= f.label :isSpecification %><br />
+    <%= f.check_box :isSpecification %>
+  </p>
+  <p>
+    <%= f.label :isNavigable %><br />
+    <%= f.check_box :isNavigable %>
+  </p>
+  <p>
+    <%= f.label :aggregation %><br />
+    <%= f.text_field :aggregation %>
+  </p>
+  <p>
+    <%= f.label :targetScope %><br />
+    <%= f.text_field :targetScope %>
+  </p>
+  <p>
+    <%= f.label :multiplicity_xmi_id %><br />
+    <%= f.text_field :multiplicity_xmi_id %>
+  </p>
+  <p>
+    <%= f.label :multiplicity_range_xmi_id %><br />
+    <%= f.text_field :multiplicity_range_xmi_id %>
+  </p>
+  <p>
+    <%= f.label :multiplicity_range_lower %><br />
+    <%= f.text_field :multiplicity_range_lower %>
+  </p>
+  <p>
+    <%= f.label :multiplicity_range_upper %><br />
+    <%= f.text_field :multiplicity_range_upper %>
+  </p>
+  <p>
+    <%= f.label :participant_type %><br />
+    <%= f.text_field :participant_type %>
+  </p>
+  <p>
+    <%= f.label :participant_xmi_id %><br />
+    <%= f.text_field :participant_xmi_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @association_end %> |
+<%= link_to 'Back', association_ends_path %>

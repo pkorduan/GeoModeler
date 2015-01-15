@@ -1,0 +1,26 @@
+<h1>Listing model_elements</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Type</th>
+    <th>Element</th>
+    <th>Model</th>
+  </tr>
+
+<% @model_elements.each do |model_element| %>
+  <tr>
+    <td><%=h model_element.xmi_id %></td>
+    <td><%=h model_element.type %></td>
+    <td><%=h model_element.element_id %></td>
+    <td><%=h model_element.model_id %></td>
+    <td><%= link_to 'Show', model_element %></td>
+    <td><%= link_to 'Edit', edit_model_element_path(model_element) %></td>
+    <td><%= link_to 'Destroy', model_element, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New model_element', new_model_element_path %>

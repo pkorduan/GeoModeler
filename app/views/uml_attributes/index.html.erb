@@ -1,0 +1,38 @@
+<h1>Listing uml_attributes</h1>
+
+<table>
+  <tr>
+    <th>Xmi</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Uml class</th>
+    <th>Visibility</th>
+    <th>Isspecification</th>
+    <th>Ownerspace</th>
+    <th>Changeability</th>
+    <th>Targetscope</th>
+    <th>Ordering</th>
+  </tr>
+
+<% @uml_attributes.each do |uml_attribute| %>
+  <tr>
+    <td><%=h uml_attribute.xmi_id %></td>
+    <td><%=h uml_attribute.name %></td>
+    <td><%=h uml_attribute.model_id %></td>
+    <td><%=h uml_attribute.uml_class_id %></td>
+    <td><%=h uml_attribute.visibility %></td>
+    <td><%=h uml_attribute.isSpecification %></td>
+    <td><%=h uml_attribute.ownerSpace %></td>
+    <td><%=h uml_attribute.changeability %></td>
+    <td><%=h uml_attribute.targetScope %></td>
+    <td><%=h uml_attribute.ordering %></td>
+    <td><%= link_to 'Show', uml_attribute %></td>
+    <td><%= link_to 'Edit', edit_uml_attribute_path(uml_attribute) %></td>
+    <td><%= link_to 'Destroy', uml_attribute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New uml_attribute', new_uml_attribute_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  isSpecification: false
+  isRoot: false
+  isLeaf: false
+  isAbstract: false
+  baseClass: MyString
+  stereotype_id: 1
+
+two:
+  xmi_id: MyString
+  name: MyString
+  model_id: 1
+  isSpecification: false
+  isRoot: false
+  isLeaf: false
+  isAbstract: false
+  baseClass: MyString
+  stereotype_id: 1
